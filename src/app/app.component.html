@@ -2,13 +2,42 @@
 
 <p>Nombre: {{ inputText.value }}</p>
 
-<input type="text" #inputText (keyup)="(0)" />
+<input type="text" #inputText />
 
-<input type="button" value="send" style="display: block;" />
+<input
+  type="button"
+  value="Send"
+  style="display: block;"
+  (click)="pasarValor(inputText.value)"
+/>
 
+<!--PROPERTI BINDING-->
 Registrado : <input type="checkbox" [checked]="userRegistrado" />
 
-{{ getUserRegistrado() }}
+<br />
+<br />
 
-<p style="inline">Registro:</p>
-<input type="radio" name="radioUser" />
+<p>{{ textRegistro }}</p>
+
+Registrado:
+<input
+  #inputRadio
+  type="radio"
+  name="radioUser"
+  style="display:inline;"
+  value="si"
+  (click)="setUserRegistrado($event)"
+
+  
+/>
+
+<br />
+
+No registrado
+<input
+  type="radio"
+  name="radioUser"
+  style="display:inline;"
+  value="no"
+  (click)="setUserRegistrado($event)"
+/>

@@ -10,7 +10,18 @@ export class AppComponent {
 
   userRegistrado = false;
 
-  getUserRegistrado() {
-    this.userRegistrado = true;
+  pasarValor(value: String) {
+    
+  }
+
+  textRegistro = 'No hay nadie registrado';
+
+  setUserRegistrado(event: Event) {
+    if ((<HTMLInputElement>event.target).value == 'si') {
+      // alert((<HTMLInputElement>event.target).value)
+      this.textRegistro = 'Se a registrado alguien';
+    } else {
+      this.textRegistro = 'No hay nadie registrado';
+    }
   }
 }
