@@ -1,0 +1,14 @@
+<p>Start editing to see some magic happen :)</p>
+
+<p>Nombre: {{ inputText.value }}</p>
+
+<input type="text" #inputText (keyup)="(0)" />
+
+<input type="button" value="send" style="display: block;" />
+
+Registrado : <input type="checkbox" [checked]="userRegistrado" />
+
+{{ getUserRegistrado() }}
+
+<p style="inline">Registro:</p>
+<input type="radio" name="radioUser" />
