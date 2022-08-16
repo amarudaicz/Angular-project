@@ -10,8 +10,8 @@ export class AppComponent {
 
   userRegistrado = false;
 
-  pasarValor(value: String) {
-    
+  guardarNombre(value:String) {
+
   }
 
   textRegistro = 'No hay nadie registrado';

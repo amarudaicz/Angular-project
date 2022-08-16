@@ -2,13 +2,18 @@
 
 <p>Nombre: {{ inputText.value }}</p>
 
-<input type="text" #inputText />
+<p>Nombre: {{ texto.value }}</p>
+
+<input type="text" #inputText/>
+<br />
+<br />
+<input type="number" #texto />
 
 <input
   type="button"
   value="Send"
   style="display: block;"
-  (click)="pasarValor(inputText.value)"
+  (click)="guardarNombre(texto.value)"
 />
 
 <!--PROPERTI BINDING-->
@@ -27,8 +32,6 @@ Registrado:
   style="display:inline;"
   value="si"
   (click)="setUserRegistrado($event)"
-
-  
 />
 
 <br />
